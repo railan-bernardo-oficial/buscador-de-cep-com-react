@@ -1,13 +1,92 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  outline: none;
+
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  width: 100%;
+  height: 100vh;
+  background: #23272f;
+  display: grid;
+  place-content: center;
+}
+
+.title{
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2.8rem;
+  animation: fadeInUp 1s ease;
+}
+
+.containerInput{
+  display: flex;
+  width: 350px;
+  margin: 0 auto;
+  background: #343a46;
+  border-radius: 0.4rem;
+  box-shadow: 1px 3px 8px rgba(0,0,0,0.3);
+}
+
+.containerInput input{
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  padding: 12px 15px;
+  background: transparent;
+  width: calc(100% - 60px);
+}
+
+.containerInput input::placeholder{
+  color: #fff;
+}
+
+.submit{
+  background: transparent;
+  font-size: 1.3rem;
+  border: none;
+  transition: .3s ease;
+  cursor: pointer;
+}
+
+.submit:hover{
+  transform: scale(1.1);
+}
+
+.containerResult{
+  max-width: 320px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 0.5rem;
+  margin: 2rem auto auto auto;
+}
+
+.titleResult{
+  font-size: 1.3rem;
+  margin-bottom: 1.4rem;
+}
+
+.containerResult span{
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes fadeInUp {
+  from{
+      transform: translateY(50px);
+      transition: 1s ease;
+      opacity: 0.3;
+  }
+
+  to{
+    transform: translateY(0);
+    transition: 1s ease;
+    opacity: 1;
+  }
 }
